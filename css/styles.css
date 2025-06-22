@@ -1,0 +1,47 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  height: 100vh;
+  background-color: aqua;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  height: 70vh;
+  margin: 20px;
+  border: 1px solid #461d1d;
+}
+
+.sidebar {
+  width: 30%;
+  border-right: 1px solid #ccc;
+  overflow-y: auto;
+  padding: 10px;
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.post-preview {
+  border-bottom: 1px solid #eee;
+  padding: 10px;
+  cursor: pointer;
+}
+
+#new-post-form {
+  padding: 20px;
+  border-top: 1px solid #ccc;
+}
+
+input, textarea {
+  display: block;
+  margin: 10px 0;
+  padding: 8px;
+  width: 100%;
+}

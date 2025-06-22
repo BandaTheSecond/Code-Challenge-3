@@ -1,0 +1,32 @@
+{
+  "posts": [
+    {
+      "title": "STORY OF MY LIFE",
+      "author": "Amos Banda",
+      "content": "This is a story of a young boy trying to catch the bag bt keeps catching the bad.",
+      "image": "https://via.placeholder.com/150",
+      "id": 1
+    },
+    {
+      "title": "MY LEARNING JOURNEY",
+      "author": "Amos Banda",
+      "content": "I joined Moringa this year and weeeeh!",
+      "image": "https://via.placeholder.com/150",
+      "id": 2
+    },
+    {
+      "title": "What I like!",
+      "author": "Banda",
+      "content": "The most above all you know is food meen!!",
+      "image": "https://via.placeholder.com/150",
+      "id": 3
+    },
+    {
+      "title": "Cars",
+      "author": "Banda himself",
+      "content": "Mercedes Benz for life....but Toyota all day kwanza the Land Cruiser 79 series!Now we talking.Don't forget the Probox yooh!!",
+      "image": "https://via.placeholder.com/150",
+      "id": 4
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Blog Post Manager</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div class="container">
+    <div id="post-list" class="sidebar"></div>
+
+    <div id="post-detail" class="content"></div>
+  </div>
+
+  <form id="new-post-form">
+    <h3>ADD POST</h3>
+    <input type="text" id="title" placeholder="Title" required />
+    <input type="text" id="author" placeholder="Author" required />
+    <textarea id="content" placeholder="Content" required></textarea>
+    <input type="submit" value="Add Post" />
+  </form>
+
+  <script src="src/index.js"></script>
+</body>
+</html>
