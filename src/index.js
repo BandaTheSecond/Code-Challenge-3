@@ -1,9 +1,7 @@
-// Base URL for the JSON server
+// Base URL for the JSON server that will be our static blog API
 const baseUrl = "http://localhost:3000/posts";
 
-/**
- * Fetches all blog posts from the server and displays them in the post list
- */
+//Fetching all blog posts from the server and displays them in the post list
 function displayPosts() {
   fetch(baseUrl)
     .then(res => res.json())
@@ -14,10 +12,8 @@ function displayPosts() {
       posts.forEach(post => appendPostToList(post)); // Render each post
     });
 }
-
-/**
- * Appends a single post title to the #post-list with a click handler
- */
+ //Appends a single post title to the #post-list with a click handler
+ 
 function appendPostToList(post) {
   const postList = document.getElementById("post-list");
 
@@ -34,11 +30,9 @@ function appendPostToList(post) {
 
   postList.appendChild(postDiv);
 }
+//Fetching and displaying the full details of a single post
+ //Includes Edit and Delete buttons
 
-/**
- * Fetches and displays the full details of a single post
- * Includes Edit and Delete buttons
- */
 function handlePostClick(postId) {
   fetch(`${baseUrl}/${postId}`)
     .then(res => res.json())
@@ -55,11 +49,7 @@ function handlePostClick(postId) {
       `;
     });
 }
-
-/**
- * Adds event listener to the form for creating a new blog post
- * Submits the data to the server and displays the post in the list
- */
+//Adds event listener to the form for creating a new blog post
 function addNewPostListener() {
   const form = document.getElementById("new-post-form");
 
@@ -92,11 +82,7 @@ function addNewPostListener() {
       });
   });
 }
-
-/**
- * Displays an editable form to update an existing blog post
- * Submits a PATCH request with the updated content
- */
+ //Displays an editable form to update an existing blog post
 function editPost(postId) {
   fetch(`${baseUrl}/${postId}`)
     .then(res => res.json())
@@ -112,7 +98,6 @@ function editPost(postId) {
           <input type="submit" value="Update" />
         </form>
       `;
-
       // Listen for form submission
       document.getElementById("edit-post-form").addEventListener("submit", e => {
         e.preventDefault();
@@ -137,24 +122,18 @@ function editPost(postId) {
       });
     });
 }
-
-/**
- * Deletes a post from the server and refreshes the UI
- */
+ //Deleting a post from the server and refreshes the UI
 function deletePost(postId) {
   fetch(`${baseUrl}/${postId}`, {
     method: "DELETE"
   }).then(() => {
-    document.getElementById("post-detail").innerHTML = ""; // Clear details view
+    document.getElementById("post-detail").innerHTML = ""; 
     displayPosts(); // Refresh the post list
   });
 }
-
-/**
- * Starts the application logic after DOM has loaded
- */
+ //Starts the application and display all posts after DOM has loaded
 function main() {
-  displayPosts();         // Show all posts in list
+  displayPosts();     
   addNewPostListener();   // Enable new post form
 }
 
